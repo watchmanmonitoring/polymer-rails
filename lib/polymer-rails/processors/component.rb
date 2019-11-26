@@ -51,7 +51,7 @@ module Polymer
             file_list = Dir.glob( "#{File.absolute_path search_file, path }*")
             return file_list.first unless file_list.blank?
           end
-          components = Dir.glob("#{File.absolute_path file, File.dirname(@context.pathname)}*")
+          components = Dir.glob("#{File.absolute_path file, File.dirname(@context.filename)}*")
           return components.blank? ? nil : components.first
         end
 
